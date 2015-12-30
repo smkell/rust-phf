@@ -1,7 +1,7 @@
 #![doc(html_root_url="http://sfackler.github.io/rust-phf/doc/v0.7.9")]
-#![cfg_attr(feature = "core", feature(no_std, core_slice_ext, core_str_ext))]
-#![cfg_attr(feature = "core", no_std)]
-#[cfg(not(feature = "core"))]
+#![cfg_attr(feature = "use_core", feature(no_std, core_slice_ext, core_str_ext))]
+#![cfg_attr(feature = "use_core", no_std)]
+#[cfg(not(feature = "use_core"))]
 extern crate std as core;
 
 use core::hash::{Hasher, Hash, SipHasher};

@@ -5,10 +5,10 @@
 //! the documentation of those crates for more details.
 #![doc(html_root_url="https://sfackler.github.io/rust-phf/doc/v0.7.9")]
 #![warn(missing_docs)]
-#![cfg_attr(feature = "core", feature(no_std, core_slice_ext))]
-#![cfg_attr(feature = "core", no_std)]
+#![cfg_attr(feature = "use_core", feature(no_std, core_slice_ext))]
+#![cfg_attr(feature = "use_core", no_std)]
 
-#[cfg(not(feature = "core"))]
+#[cfg(not(feature = "use_core"))]
 extern crate std as core;
 
 extern crate phf_shared;

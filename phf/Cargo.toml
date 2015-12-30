@@ -13,7 +13,11 @@ path = "src/lib.rs"
 test = false
 
 [features]
-core = ["phf_shared/core"]
+use_core = ["phf_shared/use_core"]
 
 [dependencies]
 phf_shared = { version = "=0.7.9", path = "../phf_shared" }
+
+[target.x86_64-unknown-none-gnu.dependencies.core]
+git = "https://github.com/phil-opp/nightly-libcore.git"
+features = [ "disable_float" ]
